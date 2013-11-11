@@ -1,0 +1,50 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="./style.css"
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="body">
+        <div id="header">
+            <asp:Label ID="CurrentTime" runat="server"></asp:Label>
+            <h1 class ="Title">Nikon DSLR Comparison</h1>
+            <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logo.jpg" />
+
+        </div>
+
+        <div id="menu">
+            <ul class ="Menu">
+            <li><a href ="./default.aspx">Home</a></li>
+            <li><a href ="./Camera.aspx">Camera Comparison</a></li>
+            <li><a href ="./About.aspx">About Us</a></li>
+            <li><a href ="./ContactUs.aspx">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+
+        </div>
+
+        <div id="footer">
+        
+
+                    <asp:Image ID="imgFooter" runat="server" ImageUrl="~/images/logo2.jpg" />
+            <p>
+                    &copy;2013 Yuxuan Zhang - This is the homework6 for Software Design.
+            </p>
+
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>
